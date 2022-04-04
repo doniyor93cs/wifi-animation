@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #585858;
+}
+
+.wifi-animation {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform-origin: 0% 0%;
+    transform: rotate(-45deg) translate(-50%, -50%) skew(-7deg, -7deg);
+}
+
+.wifi-animation .wifi-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: solid #ccc;
+    border-width: 28px 28px 0 0;
+    border-radius: 0% 100% 0% 0%;
+    opacity: 0;
+    animation: wifi 3s infinite;
+}
+
+.wifi-animation .wifi-circle.one {
+    animation-delay: .8s;
+}
+
+.wifi-animation .wifi-circle.two {
+    width: 150px;
+    height: 150px;
+    animation-delay: .4s;
+}
+
+.wifi-animation .wifi-circle.three {
+    width: 95px;
+    height: 95px;
+}
+
+.wifi-animation .wifi-circle.four {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    background-color: #ccc;
+    animation: none;
+}
+
+@keyframes wifi {
+    0% {
+        opacity: 0.4;
+    }
+    5% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
